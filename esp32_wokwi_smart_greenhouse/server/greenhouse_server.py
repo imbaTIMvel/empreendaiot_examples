@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 API_URL = "https://api.groq.com/openai/v1/chat/completions"
 HEADERS = {
-    "Authorization": "Bearer sua-chave-aqui", # INSERIR CHAVE API !!!
+    "Authorization": "Bearer SUA-CHAVE-AQUI", # INSERIR CHAVE API !!!
     "Content-Type": "application/json"
 }
 
