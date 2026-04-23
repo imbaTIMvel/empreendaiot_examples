@@ -10,7 +10,7 @@ SSID = "Wokwi-GUEST"
 PASSWORD = ""
 
 # --- API ---
-API_URL = "http://saniya-paroxysmic-gavyn.ngrok-free.dev/plant"
+API_URL = "SUA-URL-AQUI" # INSERIR URL !!!
 
 # --- Sensores ---
 dht_sensor = dht.DHT22(Pin(4))
