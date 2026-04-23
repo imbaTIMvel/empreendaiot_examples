@@ -79,5 +79,12 @@ Segue, abaixo, o passo a passo para configurar e executar o programa no ambiente
 1. No site [Wokwi](https://wokwi.com), selecione a aba "My Projects" no seu perfil e clique no botão "New Project"
 2. Selecione o microcontrolador ESP32 padrão (1ª opção), optando pelo "Beginner template" em Micropython
 3. Na aba "main.py", substitua o template pelo código Python disponível em: [main.py](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/main.py)
-   - A
 4. Na aba "diagram.json", substitua o template pelo JSON disponível em: [diagram.json](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/diagram.json)
+5. Feito isso, abra o Visual Studio Code
+6. Crie um novo arquivo .py e copie o código Python disponível em: [greenhouse_server.py](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/server/greenhouse_server.py)
+7. Antes de ativar o servidor, certifique-se de ter Python, Flask, Requests e JSON instalados em sua máquina
+   - Para fazê-lo no Windows, abra o Command Prompt pressionando Windows + R, digitando "cmd" e clicando em "OK"
+   - Para conferir se o Python está instalado, digite ```python --version``` no Command Prompt e pressione "Enter"
+     - Se o Python não estiver instalado, baixe o instalador clicando [aqui](https://www.python.org/downloads/)
+   - Para conferir se o Flask está instalado, digite ```flask --version``` no Command Prompt e pressione "Enter"
+     - Se o Flask não estiver instalado, instale-o digitando ```pip install flask``` no Command Prompt e pressionando "Enter"
