@@ -112,7 +112,7 @@ HEADERS = {
 > app.run(host="0.0.0.0", port=5000)
 > ```
 
-  - Exposta a API, seu Command Prompt deve mostrar algo semelhante à imagem abaixo:
+11. Exposta a API, seu Command Prompt deve mostrar algo semelhante à imagem abaixo:
 
 ![Command Prompt](images/cmd.png)
 
@@ -120,7 +120,7 @@ HEADERS = {
 > Você pode conferir se a exposição de API deu certo pesquisando uma planta diretamente na URL de forwarding (vide terminal ngrok no Command Prompt) do tipo "localhost". Para fazê-lo, basta adicionar "/plant?name=NOME-DA-PLANTA-AQUI" ao final da URL no seu navegador.
 > **Exemplo:** ```http://localhost:5000/plant?name=tomate```
 
-11. Com o servidor rodando e a API exposta, insira a URL de forwarding, com o prefixo "/plant", como API_URL no código Wokwi
+12. Com o servidor rodando e a API exposta, insira a URL de forwarding, com o prefixo "/plant", como API_URL no código Wokwi
     - No meu caso, vide imagem, seria algo como:
 
 ```python
