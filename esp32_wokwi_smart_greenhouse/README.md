@@ -46,6 +46,10 @@ Seguindo o seguinte esquema de conexões:
 |   18  | Resistor 220Ω | --- |  ---  |    ---    |      ---     |     A    |
 |   34  |      ---      |  AO |  ---  |    ---    |      ---     |    ---   |
 
+Como pode ser visto na imagem a seguir:
+
+![Diagrama de conexões no Wokwi](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/images/diagram.png)
+
 ## Servidor local
 
 > Para ver o código (raw file), acesse: [greenhouse_server.py](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/greenhouse_server.py)
