@@ -118,6 +118,7 @@ HEADERS = {
 
 > [!Tip]
 > Você pode conferir se a exposição de API deu certo pesquisando uma planta diretamente na URL de forwarding (vide terminal ngrok no Command Prompt) do tipo "localhost". Para fazê-lo, basta adicionar "/plant?name=NOME-DA-PLANTA-AQUI" ao final da URL no seu navegador.
+> 
 > **Exemplo:** ```http://localhost:5000/plant?name=tomate```
 
 12. Com o servidor rodando e a API exposta, insira a URL de forwarding, com o prefixo "/plant", como API_URL no código Wokwi
