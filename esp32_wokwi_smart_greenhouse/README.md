@@ -38,6 +38,14 @@ Seguindo o seguinte esquema de conexões:
 
 | ESP32 | Intermediário | LDR | DHT22 | LED verde | LED vermelho | LED azul |
 | ----- | ------------- | --- | ----- | --------- | ------------ | -------- |
-|  3V3  |      ---      | VCC |  VCC  |    ///    |      ///     |    ///   |
-|  GND  |      ///      | GND |  GND  |     C     |       C      |     C    |
-|   34  |      ///      |  AO |  ///  |    ///    |      ///     |    ///   |
+|  3V3  |      ---      | VCC |  VCC  |    ---    |      ---     |    ---   |
+|  GND  |      ---      | GND |  GND  |     C     |       C      |     C    |
+|   4   |      ---      | --- |  SDA  |    ---    |      ---     |    ---   |
+|   16  | Resistor 220Ω | --- |  ---  |     A     |      ---     |    ---   |
+|   17  | Resistor 220Ω | --- |  ---  |    ---    |       A      |    ---   |
+|   18  | Resistor 220Ω | --- |  ---  |    ---    |      ---     |     A    |
+|   34  |      ---      |  AO |  ---  |    ---    |      ---     |    ---   |
+
+## Servidor local
+
+> Para ver o código (raw file), acesse: [greenhouse_server.py](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/greenhouse_server.py)
