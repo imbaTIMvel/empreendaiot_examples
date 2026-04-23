@@ -38,6 +38,6 @@ Seguindo o seguinte esquema de conexões:
 
 | ESP32 | Intermediário | LDR | DHT22 | LED verde | LED vermelho | LED azul |
 | ----- | ------------- | --- | ----- | --------- | ------------ | -------- |
-|  3V3  |      ///      | VCC |  VCC  |    ///    |      ///     |    ///   |
+|  3V3  |      ---      | VCC |  VCC  |    ///    |      ///     |    ///   |
 |  GND  |      ///      | GND |  GND  |     C     |       C      |     C    |
 |   34  |      ///      |  AO |  ///  |    ///    |      ///     |    ///   |
