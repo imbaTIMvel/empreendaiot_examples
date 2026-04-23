@@ -75,3 +75,9 @@ O servidor local exerce a função de:
 
 ## Configuração
 
+Segue, abaixo, o passo a passo para configurar e executar o programa no ambiente simulado Wokwi:
+1. No site [Wokwi](https://wokwi.com), selecione a aba "My Projects" no seu perfil e clique no botão "New Project"
+2. Selecione o microcontrolador ESP32 padrão (1ª opção), optando pelo "Beginner template" em Micropython
+3. Na aba "main.py", substitua o template pelo código Python disponível em: [main.py](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/main.py)
+   - A
+4. Na aba "diagram.json", substitua o template pelo JSON disponível em: [diagram.json](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/diagram.json)
