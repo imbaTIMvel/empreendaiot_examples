@@ -48,7 +48,7 @@ Seguindo o seguinte esquema de conexões:
 
 Como pode ser visto na imagem a seguir:
 
-![Diagrama de conexões no Wokwi](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/images/diagram.png)
+![Alt Text](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/images/diagram.png)
 
 ## Servidor local
 
