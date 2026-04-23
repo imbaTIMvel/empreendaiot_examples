@@ -128,4 +128,4 @@ HEADERS = {
 API_URL = "http://saniya-paroxysmic-gavyn.ngrok-free.dev/plant"
 ```
 
-12. Feito isso, basta executar o programa no Wokwi
+Com isso, basta executar o programa no Wokwi!
