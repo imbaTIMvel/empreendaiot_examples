@@ -82,9 +82,28 @@ Segue, abaixo, o passo a passo para configurar e executar o programa no ambiente
 4. Na aba "diagram.json", substitua o template pelo JSON disponível em: [diagram.json](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/diagram.json)
 5. Feito isso, abra o Visual Studio Code
 6. Crie um novo arquivo .py e copie o código Python disponível em: [greenhouse_server.py](https://github.com/imbaTIMvel/empreendaiot_examples/tree/main/esp32_wokwi_smart_greenhouse/server/greenhouse_server.py)
-7. Antes de ativar o servidor, certifique-se de ter Python, Flask, Requests e JSON instalados em sua máquina
+7. Antes de ativar o servidor, certifique-se de ter Python, Flask e a biblioteca requests instalados em sua máquina
    - Para fazê-lo no Windows, abra o Command Prompt pressionando Windows + R, digitando "cmd" e clicando em "OK"
-   - Para conferir se o Python está instalado, digite ```python --version``` no Command Prompt e pressione "Enter"
-     - Se o Python não estiver instalado, baixe o instalador clicando [aqui](https://www.python.org/downloads/)
-   - Para conferir se o Flask está instalado, digite ```flask --version``` no Command Prompt e pressione "Enter"
-     - Se o Flask não estiver instalado, instale-o digitando ```pip install flask``` no Command Prompt e pressionando "Enter"
+     - Para conferir se o Python está instalado, digite ```python --version``` no Command Prompt e pressione "Enter"
+       - Se o Python não estiver instalado, baixe o instalador clicando [aqui](https://www.python.org/downloads/)
+     - Para conferir se o Flask está instalado, digite ```flask --version``` no Command Prompt e pressione "Enter"
+       - Se o Flask não estiver instalado, instale-o digitando ```pip install flask``` no Command Prompt e pressionando "Enter"
+     - Para conferir se a biblioteca Requests está instalada, digite ```pip show requests``` no Command Prompt e pressione "Enter"
+       - Se a biblioteca Requests não estiver instalada, instale-a digitando ```python -m pip install requests``` no Command Prompt e pressionando "Enter"
+8. Antes de ativar o servidor, também é necessário criar uma chave API
+   - Para fazê-lo, vá até o site [GroqCloud](https://console.groq.com/home), na aba "API Keys" e clique no botão "Create API Key"
+     - **ATENÇÃO!** Após criar sua chave, certifique-se de anotá-la em um lugar seguro, pois ela não poderá mais ser copiada do site após sua criação
+   - Criada a chave, coloque-a no espaço designado no código do servidor (aberto no Visual Studio Code, perto do topo):
+```
+HEADERS = {
+    "Authorization": "Bearer SUA-CHAVE-AQUI",
+    "Content-Type": "application/json"
+}
+```
+9. Feito isso, ative o servidor executando o código Python
+10. Após a ativação do servidor, é necessário expor a API para que o Wokwi consiga acessá-la
+    - Para fazê-lo, vá até o site [ngrok](https://dashboard.ngrok.com/get-started/setup/windows), na aba "Identity & Access", seção "Authtokens" e crie um novo token de autenticação
+    - Criado o Authtoken, configure-o em sua máquina via Command Prompt
+      - Para fazê-lo, digite ```ngrok config add-authtoken SEU-TOKEN-AQUI``` inserindo o Authtoken no espaço designado e pressionando "Enter" 
+    - Feito isso, exponha a API digitando ```ngrok http 5000 --scheme=http``` no Command Prompt e pressionando "Enter"
+![Warning] É importante que o port (número inserido ao expor a API, ou seja, neste caso, 5000) inserido no Command Prompt seja o mesmo especificado no código do servidor (aberto no Visual Studio Code) - vide última linha.
