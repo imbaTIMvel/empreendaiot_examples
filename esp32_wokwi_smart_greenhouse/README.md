@@ -107,13 +107,12 @@ HEADERS = {
       - Para fazê-lo, digite ```ngrok config add-authtoken SEU-TOKEN-AQUI``` inserindo o Authtoken no espaço designado e pressionando "Enter" 
     - Feito isso, exponha a API digitando ```ngrok http 5000 --scheme=http``` no Command Prompt e pressionando "Enter"
 > [!Warning]
-> É importante que o port (número inserido ao expor a API, ou seja, neste caso, 5000) inserido no Command Prompt seja o mesmo especificado no código do servidor (aberto no Visual Studio Code) - vide última linha.
-
+> É importante que o port (número inserido ao expor a API, ou seja, neste caso, 5000) inserido no Command Prompt seja o mesmo especificado no código do servidor (aberto no Visual Studio Code) - vide última linha:
 > ```python
 > app.run(host="0.0.0.0", port=5000)
 > ```
 
-    - Exposta a API, seu Command Prompt deve mostrar algo semelhante à imagem abaixo:
+  - Exposta a API, seu Command Prompt deve mostrar algo semelhante à imagem abaixo:
 
 ![Command Prompt](images/cmd.png)
 
