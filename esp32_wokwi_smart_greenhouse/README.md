@@ -106,4 +106,23 @@ HEADERS = {
     - Criado o Authtoken, configure-o em sua máquina via Command Prompt
       - Para fazê-lo, digite ```ngrok config add-authtoken SEU-TOKEN-AQUI``` inserindo o Authtoken no espaço designado e pressionando "Enter" 
     - Feito isso, exponha a API digitando ```ngrok http 5000 --scheme=http``` no Command Prompt e pressionando "Enter"
-![Warning] É importante que o port (número inserido ao expor a API, ou seja, neste caso, 5000) inserido no Command Prompt seja o mesmo especificado no código do servidor (aberto no Visual Studio Code) - vide última linha.
+> [!Warning]
+> É importante que o port (número inserido ao expor a API, ou seja, neste caso, 5000) inserido no Command Prompt seja o mesmo especificado no código do servidor (aberto no Visual Studio Code) - vide última linha.
+> ```app.run(host="0.0.0.0", port=5000)```
+    - Exposta a API, seu Command Prompt deve mostrar algo semelhante à imagem abaixo:
+
+![Command Prompt](images/cmd.png)
+
+> [!Tip]
+> Você pode conferir se a exposição de API deu certo pesquisando uma planta diretamente na URL de forwarding (vide terminal ngrok no Command Prompt) do tipo "localhost". Para fazê-lo, basta adicionar "/plant?name=NOME-DA-PLANTA-AQUI" ao final da URL no seu navegador.
+> **Exemplo:** http://localhost:5000/plant?name=tomate
+
+11. Com o servidor rodando e a API exposta, insira a URL de forwarding, com o prefixo "/plant", como API_URL no código Wokwi
+    - No meu caso, vide imagem, seria algo como:
+
+```
+# --- API ---
+API_URL = "http://saniya-paroxysmic-gavyn.ngrok-free.dev/plant"
+```
+
+12. Feito isso, basta executar o programa no Wokwi
