@@ -1,0 +1,52 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4728
+load:0x40078000,len:14888
+load:0x40080400,len:3368
+entry 0x400805cc
+# projeto 02 - leitura de potenciometro (ADC)
+# escala raw = read_u16() (0..65535)
+# amostragem 50 ms | media movel 5 amostras | reporte > 1.0 %
+      t_ms      raw  tensao_V      pct   motivo
+       200        0      0.00     0.0%  inicial
+      1500    13107      0.66    20.0%    delta
+      1550    26214      1.32    40.0%    delta
+      1600    39321      1.98    60.0%    delta
+      1650    52428      2.64    80.0%    delta
+      1700    65535      3.30   100.0%    delta
+      1800    64715      3.26    98.7%    delta
+      1850    63986      3.22    97.6%    delta
+      1900    63256      3.19    96.5%    delta
+      1950    62437      3.14    95.3%    delta
+      2050    61746      3.11    94.2%    delta
+      2200    62898      3.17    96.0%    delta
+      2300    64267      3.24    98.1%    delta
+      2400    65099      3.28    99.3%    delta
+      7400    65535      3.30   100.0% periodico
+     12400    65535      3.30   100.0% periodico
+     17400    65535      3.30   100.0% periodico
+     22400    65535      3.30   100.0% periodico
+     23750    61601      3.10    94.0%    delta
+     23800    56938      2.87    86.9%    delta
+     23850    51941      2.62    79.3%    delta
+     23900    46894      2.36    71.6%    delta
+     23950    41846      2.11    63.9%    delta
+     24000    40732      2.05    62.2%    delta
+     24350    43049      2.17    65.7%    delta
+     24400    45431      2.29    69.3%    delta
+     24450    47812      2.41    73.0%    delta
+     24500    50194      2.53    76.6%    delta
+     24550    51999      2.62    79.3%    delta
+     25100    50578      2.55    77.2%    delta
+     25150    48440      2.44    73.9%    delta
+     25200    46199      2.33    70.5%    delta
+     25250    44023      2.22    67.2%    delta
+     25300    42141      2.12    64.3%    delta
+     25350    40988      2.06    62.5%    delta
+     30350    40809      2.05    62.3% periodico
+     35350    40809      2.05    62.3% periodico
+     40350    40809      2.05    62.3% periodico

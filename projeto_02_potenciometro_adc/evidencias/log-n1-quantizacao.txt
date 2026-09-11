@@ -1,0 +1,51 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4728
+load:0x40078000,len:14888
+load:0x40080400,len:3368
+entry 0x400805cc
+# projeto 02 - leitura de potenciometro (ADC)
+# escala raw = read_u16() (0..65535)
+# amostragem 50 ms | media movel 1 amostras | reporte > 1.0 %
+      t_ms      raw  tensao_V      pct   motivo
+         0    32808      1.65    50.1%  inicial
+      3400    35432      1.78    54.1%    delta
+      3500    34472      1.74    52.6%    delta
+      3550    33768      1.70    51.5%    delta
+      3600    28887      1.45    44.1%    delta
+      3650    25238      1.27    38.5%    delta
+      3700    22805      1.15    34.8%    delta
+      6100    27158      1.37    41.4%    delta
+      6150    30359      1.53    46.3%    delta
+      6200    34728      1.75    53.0%    delta
+      6250    35432      1.78    54.1%    delta
+      6300    39785      2.00    60.7%    delta
+      6350    42986      2.16    65.6%    delta
+      6400    47083      2.37    71.8%    delta
+      6450    48811      2.46    74.5%    delta
+      6500    50988      2.57    77.8%    delta
+      6600    52396      2.64    80.0%    delta
+      6650    53164      2.68    81.1%    delta
+      6700    54125      2.73    82.6%    delta
+      6900    55357      2.79    84.5%    delta
+     11900    55357      2.79    84.5% periodico
+     12100    51692      2.60    78.9%    delta
+     14600    49003      2.47    74.8%    delta
+     14650    37161      1.87    56.7%    delta
+     14700    32279      1.63    49.3%    delta
+     14750    23765      1.20    36.3%    delta
+     14800    20372      1.03    31.1%    delta
+     14850    12883      0.65    19.7%    delta
+     14900    10178      0.51    15.5%    delta
+     14950     5825      0.29     8.9%    delta
+     15000     3648      0.18     5.6%    delta
+     15050        0      0.00     0.0%    delta
+     17400     1472      0.07     2.2%    delta
+     17450     4097      0.21     6.3%    delta
+     17500     5569      0.28     8.5%    delta
+     17550    10690      0.54    16.3%    delta
+     17650    12371      0.62    18.9%    delta
