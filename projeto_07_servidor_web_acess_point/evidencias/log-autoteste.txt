@@ -1,0 +1,71 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4728
+load:0x40078000,len:14888
+load:0x40080400,len:3368
+entry 0x400805cc
+# Access Point no ar
+#   SSID:      EmpreendAIoT-P07
+#   seguranca: WPA2-PSK
+#   IP:        192.168.4.1
+#   URL:       http://192.168.4.1/
+# servidor HTTP escutando na porta 80
+# aguardando o DHT22 estabilizar...
+#
+# ---- autoteste: a placa como cliente dela mesma ----
+# servidor: GET / -> 200
+#   req 2/3  pagina na raiz      HTTP/1.1 200 OK
+# servidor: GET /dados -> 200
+#   req 4    rota de dados JSON  HTTP/1.1 200 OK
+# servidor: GET /nao-existe -> 404
+#   req 5    rota inexistente    HTTP/1.1 404 Not Found
+# servidor: ? ? -> 400
+#   req 7    request malformado  HTTP/1.1 400 Bad Request
+# servidor: ? ? -> 400
+#   req 7    request gigante     HTTP/1.1 400 Bad Request
+# servidor: GET / -> 200
+#   req 6    cliente some no meio (cliente fechou; servidor seguiu de pe)
+#
+# ---- carga (req 4): o LED do diagrama deve piscar 3 vezes ----
+#   ciclo 1  /ligar     HTTP/1.1 200 OK  pino = 1  ok
+#   ciclo 1  /desligar  HTTP/1.1 200 OK  pino = 0  ok
+#   ciclo 2  /ligar     HTTP/1.1 200 OK  pino = 1  ok
+#   ciclo 2  /desligar  HTTP/1.1 200 OK  pino = 0  ok
+#   ciclo 3  /ligar     HTTP/1.1 200 OK  pino = 1  ok
+#   ciclo 3  /desligar  HTTP/1.1 200 OK  pino = 0  ok
+#
+# ---- estabilidade de memoria: 50 requests ----
+#   memoria livre antes:  132608 B
+#   memoria livre depois: 132768 B
+#   variacao: +160 B
+# ---- fim do autoteste ----
+#
+#
+# ---- teste de variacao: 20 rodadas ----
+#   temp  -40.0 C  umid   0.0 %  pagina ok     json ok
+#   temp   80.0 C  umid 100.0 %  pagina ok     json ok
+#   temp   -0.1 C  umid  99.9 %  pagina ok     json ok
+#   temp    falha  umid   falha  pagina ok     json ok
+#   temp   45.7 C  umid  60.4 %  pagina ok     json ok
+#   temp   29.3 C  umid  91.2 %  pagina ok     json ok
+#   temp  -30.4 C  umid  26.2 %  pagina ok     json ok
+#   temp   24.7 C  umid  17.4 %  pagina ok     json ok
+#   temp   68.3 C  umid  22.9 %  pagina ok     json ok
+#   temp   33.4 C  umid  90.2 %  pagina ok     json ok
+#   temp  -22.1 C  umid   3.3 %  pagina ok     json ok
+#   temp   30.9 C  umid  38.3 %  pagina ok     json ok
+#   temp    3.0 C  umid  87.3 %  pagina ok     json ok
+#   temp   63.7 C  umid  12.0 %  pagina ok     json ok
+#   temp   72.4 C  umid  62.9 %  pagina ok     json ok
+#   temp   30.3 C  umid  69.7 %  pagina ok     json ok
+#   temp  -24.7 C  umid  75.9 %  pagina ok     json ok
+#   temp   63.1 C  umid   4.5 %  pagina ok     json ok
+#   temp  -18.2 C  umid  37.2 %  pagina ok     json ok
+#   temp   -2.4 C  umid  11.6 %  pagina ok     json ok
+#   20 de 20 rodadas corretas
+# ---- fim do teste de variacao ----
+# pronto. aguardando requests em http://192.168.4.1/

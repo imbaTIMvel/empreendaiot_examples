@@ -1,0 +1,14 @@
+[wokwi]
+version = 1
+firmware = "main.py"
+elf = "main.py"
+
+# Encaminhamento de porta para a extensao Wokwi do VS Code (nao usado no
+# Wokwi do navegador, onde este arquivo e ignorado). Descomentar para expor o
+# servidor da placa simulada em http://localhost:8180 na maquina local.
+# NAO VERIFICADO: o fluxo de MicroPython na extensao pode exigir o binario do
+# firmware no campo 'firmware' em vez de main.py. Ver Limitacoes no README.
+#
+# [[net.forward]]
+# from = "localhost:8180"
+# to = "target:80"
