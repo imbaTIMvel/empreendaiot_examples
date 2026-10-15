@@ -1,0 +1,7 @@
+[wokwi]
+version = 1
+# Baixe este UF2 para a pasta gabarito conforme o README (preparo local).
+# main.py e enviado pelo mpremote; ele nao e um arquivo de firmware.
+firmware = "RPI_PICO-20251209-v1.27.0.uf2"
+elf = "RPI_PICO-20251209-v1.27.0.uf2"
+rfc2217ServerPort = 4000

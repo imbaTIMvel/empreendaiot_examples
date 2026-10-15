@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Projeto didatico - Robotica",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-pi-pico", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -10, "left": 350, "attrs": { "temperature": "24", "humidity": "40" } },
+    { "type": "wokwi-slide-switch", "id": "chave", "top": 175, "left": 265, "attrs": { "value": "", "bounce": "0" } },
+    { "type": "wokwi-resistor", "id": "pullup", "top": 95, "left": 220, "rotate": 90, "attrs": { "value": "5100" } },
+    { "type": "wokwi-led", "id": "ledErro", "top": 280, "left": 350, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "resLed", "top": 310, "left": 220, "attrs": { "value": "330" } },
+    { "type": "wokwi-text", "id": "titulo", "top": -65, "left": 0, "attrs": { "text": "Raspberry Pi Pico + DHT22 | MicroPython" } },
+    { "type": "wokwi-text", "id": "textoChave", "top": 225, "left": 200, "attrs": { "text": "ESQ: conectado | DIR: falha" } },
+    { "type": "wokwi-text", "id": "textoLed", "top": 370, "left": 200, "attrs": { "text": "LED: limite de falhas atingido" } }
+  ],
+  "connections": [
+    [ "pico:3V3", "dht:VCC", "red", [ "h70", "v-40" ] ],
+    [ "pico:GND.8", "dht:GND", "black", [ "h60", "v-55" ] ],
+    [ "pico:GP27", "chave:2", "green", [ "h40", "v70" ] ],
+    [ "chave:1", "dht:SDA", "green", [ "v-30" ] ],
+    [ "pullup:1", "pico:3V3", "red", [] ],
+    [ "pullup:2", "chave:2", "green", [] ],
+    [ "pico:GP26", "resLed:1", "orange", [ "h25", "v170" ] ],
+    [ "resLed:2", "ledErro:A", "orange", [] ],
+    [ "ledErro:C", "pico:GND.8", "black", [ "v35", "h-200" ] ]
+  ],
+  "serialMonitor": { "display": "always", "newline": "lf" },
+  "dependencies": {}
+}
