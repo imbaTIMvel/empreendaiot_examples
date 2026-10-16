@@ -1,0 +1,15 @@
+MicroPython oficial para Raspberry Pi Pico RP2040
+Versao: 1.27.0 (2025-12-09)
+Arquivo: RPI_PICO-20251209-v1.27.0.uf2
+Fonte: https://micropython.org/resources/firmware/RPI_PICO-20251209-v1.27.0.uf2
+Pagina: https://micropython.org/download/RPI_PICO/
+SHA-256: 7942ec963839ecd827887393020e73e6355647a79bc8737bbed7a1ed77145ce9
+Tamanho: 675840 bytes
+
+Binario redistribuido sem modificacoes. Licenca principal copiada de:
+https://github.com/micropython/micropython/blob/v1.27.0/LICENSE
+Codigo-fonte, dependencias e avisos de terceiros no repositorio acima.
+
+Esta versao coincide com o exemplo Pico consultado em:
+https://github.com/wokwi/wokwi-vscode-micropython/tree/main/pi-pico
+O pacote mpremote correspondente e 1.27.0.
