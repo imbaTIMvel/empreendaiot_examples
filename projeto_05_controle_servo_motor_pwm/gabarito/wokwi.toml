@@ -1,0 +1,6 @@
+[wokwi]
+version = 1
+firmware = "firmware/RPI_PICO-20251209-v1.27.0.uf2"
+rfc2217ServerPort = 4000
+# Inicie o simulador e envie main.py com mpremote, conforme o README.
+# O campo elf e opcional; o arquivo UF2 nao e um ELF.

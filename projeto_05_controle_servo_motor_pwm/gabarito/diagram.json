@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "author": "Monitoria - Trilha IoT",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot",
+      "top": -10,
+      "left": 290,
+      "attrs": {
+        "value": "0"
+      }
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo",
+      "top": 175,
+      "left": 300,
+      "attrs": {
+        "horn": "single"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "parar",
+      "top": 340,
+      "left": 280,
+      "attrs": {
+        "color": "red",
+        "label": "ENCERRAR"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "titulo",
+      "top": -65,
+      "left": 0,
+      "attrs": {
+        "text": "Projeto 05 | Pico + servo PWM"
+      }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "rotulo",
+      "top": 410,
+      "left": 120,
+      "attrs": {
+        "text": "ENCERRAR: aguarde retorno antes de Stop"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "pico:3V3",
+      "pot:VCC",
+      "red",
+      [
+        "h60",
+        "v-45"
+      ]
+    ],
+    [
+      "pico:GND.8",
+      "pot:GND",
+      "black",
+      [
+        "h40",
+        "v-25"
+      ]
+    ],
+    [
+      "pico:GP26",
+      "pot:SIG",
+      "green",
+      [
+        "h85"
+      ]
+    ],
+    [
+      "pico:VBUS",
+      "servo:V+",
+      "red",
+      [
+        "h105",
+        "v120"
+      ]
+    ],
+    [
+      "pico:GND.8",
+      "servo:GND",
+      "black",
+      [
+        "h65",
+        "v135"
+      ]
+    ],
+    [
+      "pico:GP15",
+      "servo:PWM",
+      "orange",
+      [
+        "v55",
+        "h170"
+      ]
+    ],
+    [
+      "pico:GP14",
+      "parar:1.l",
+      "blue",
+      [
+        "h-35",
+        "v160"
+      ]
+    ],
+    [
+      "pico:GND.4",
+      "parar:2.l",
+      "black",
+      [
+        "h-55",
+        "v180"
+      ]
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf"
+  },
+  "dependencies": {}
+}
